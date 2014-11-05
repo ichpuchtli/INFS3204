@@ -1,0 +1,18 @@
+[
+  {
+    "username": "sam",
+    "password": "4i9cjs5uvzgmbo6r"
+  },
+  {
+    "username": "jake",
+    "password": "w54bx8nt3dmzehfr"
+  },
+  {
+    "username": "tom",
+    "password": "yawnn0prcuqsemi0"
+  },
+  {
+    "username": "jhjh",
+    "password": "onjyho2qdbsgiudi"
+  }
+]

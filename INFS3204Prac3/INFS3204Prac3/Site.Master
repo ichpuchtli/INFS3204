@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="INFS3204Prac3.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="/Scripts/jquery-1.9.0.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="padding-top: 60px;">
+    <form runat="server">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" runat="server" href="~/">INFS3204 Prac 3</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li><a href="/Service1.svc"><span class="glyphicon glyphicon-cog"></span> Service1.svc</a></li>
+                    <li><a href="/Search"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                    <li><a href="/SaveInfo"><span class="glyphicon glyphicon-floppy-disk"></span> SaveInfo</a></li>
+                    <li><a href="/stock.txt"><span class="glyphicon glyphicon-file"></span> Stock DB</a></li>
+                    <li><a href="/store.txt"><span class="glyphicon glyphicon-file"></span> Store DB</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LINQDatabaseService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49997/LINQDatabaseService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49997/LINQDatabaseService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49997/LINQDatabaseService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ClinicLINQWebApp" />
+      <xsd:import schemaLocation="http://localhost:49997/LINQDatabaseService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import schemaLocation="http://localhost:49997/LINQDatabaseService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILINQDatabaseService_PlayerRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlayerRegistration" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_PlayerRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlayerRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_ClubRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClubRegistration" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_ClubRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClubRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_GetPlayerInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_GetPlayerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_GetPlayerInfo_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q1:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_GetClubInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_GetClubInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_NewMembership_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewMembership" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_NewMembership_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewMembershipResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_GetMembership_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembership" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_GetMembership_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembershipResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_UpdateMembership_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMembership" />
+  </wsdl:message>
+  <wsdl:message name="ILINQDatabaseService_UpdateMembership_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMembershipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILINQDatabaseService">
+    <wsdl:operation name="PlayerRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILINQDatabaseService/PlayerRegistration" message="tns:ILINQDatabaseService_PlayerRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILINQDatabaseService/PlayerRegistrationResponse" message="tns:ILINQDatabaseService_PlayerRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClubRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILINQDatabaseService/ClubRegistration" message="tns:ILINQDatabaseService_ClubRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILINQDatabaseService/ClubRegistrationResponse" message="tns:ILINQDatabaseService_ClubRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILINQDatabaseService/GetPlayerInfo" message="tns:ILINQDatabaseService_GetPlayerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILINQDatabaseService/GetPlayerInfoResponse" message="tns:ILINQDatabaseService_GetPlayerInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ILINQDatabaseService/GetPlayerInfoFaultExceptionFault" name="FaultExceptionFault" message="tns:ILINQDatabaseService_GetPlayerInfo_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClubInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILINQDatabaseService/GetClubInfo" message="tns:ILINQDatabaseService_GetClubInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILINQDatabaseService/GetClubInfoResponse" message="tns:ILINQDatabaseService_GetClubInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewMembership">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILINQDatabaseService/NewMembership" message="tns:ILINQDatabaseService_NewMembership_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILINQDatabaseService/NewMembershipResponse" message="tns:ILINQDatabaseService_NewMembership_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMembership">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILINQDatabaseService/GetMembership" message="tns:ILINQDatabaseService_GetMembership_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILINQDatabaseService/GetMembershipResponse" message="tns:ILINQDatabaseService_GetMembership_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMembership">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILINQDatabaseService/UpdateMembership" message="tns:ILINQDatabaseService_UpdateMembership_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILINQDatabaseService/UpdateMembershipResponse" message="tns:ILINQDatabaseService_UpdateMembership_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILINQDatabaseService" type="tns:ILINQDatabaseService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PlayerRegistration">
+      <soap:operation soapAction="http://tempuri.org/ILINQDatabaseService/PlayerRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClubRegistration">
+      <soap:operation soapAction="http://tempuri.org/ILINQDatabaseService/ClubRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerInfo">
+      <soap:operation soapAction="http://tempuri.org/ILINQDatabaseService/GetPlayerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FaultExceptionFault">
+        <soap:fault use="literal" name="FaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetClubInfo">
+      <soap:operation soapAction="http://tempuri.org/ILINQDatabaseService/GetClubInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewMembership">
+      <soap:operation soapAction="http://tempuri.org/ILINQDatabaseService/NewMembership" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembership">
+      <soap:operation soapAction="http://tempuri.org/ILINQDatabaseService/GetMembership" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMembership">
+      <soap:operation soapAction="http://tempuri.org/ILINQDatabaseService/UpdateMembership" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LINQDatabaseService">
+    <wsdl:port name="BasicHttpBinding_ILINQDatabaseService" binding="tns:BasicHttpBinding_ILINQDatabaseService">
+      <soap:address location="http://localhost:49997/LINQDatabaseService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

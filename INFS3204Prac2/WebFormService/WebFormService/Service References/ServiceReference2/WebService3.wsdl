@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Mixer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="foods" type="tns:ArrayOfFood" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFood">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Food" nillable="true" type="tns:Food" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Food">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="weight" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="fat" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="calorie" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="MixerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MixerResult" type="tns:Food" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MixerSoapIn">
+    <wsdl:part name="parameters" element="tns:Mixer" />
+  </wsdl:message>
+  <wsdl:message name="MixerSoapOut">
+    <wsdl:part name="parameters" element="tns:MixerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService3Soap">
+    <wsdl:operation name="Mixer">
+      <wsdl:input message="tns:MixerSoapIn" />
+      <wsdl:output message="tns:MixerSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService3Soap" type="tns:WebService3Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Mixer">
+      <soap:operation soapAction="http://tempuri.org/Mixer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService3Soap12" type="tns:WebService3Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Mixer">
+      <soap12:operation soapAction="http://tempuri.org/Mixer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService3">
+    <wsdl:port name="WebService3Soap" binding="tns:WebService3Soap">
+      <soap:address location="http://localhost:49752/WebService3.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService3Soap12" binding="tns:WebService3Soap12">
+      <soap12:address location="http://localhost:49752/WebService3.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

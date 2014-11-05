@@ -1,0 +1,62 @@
+[
+  {
+    "name": "iPad",
+    "isDiscontinued": false,
+    "productionDate": "2014-10-06T22:09:00",
+    "StoreID": "AppleSA"
+  },
+  {
+    "name": "iPad",
+    "isDiscontinued": false,
+    "productionDate": "2014-10-06T22:22:00",
+    "StoreID": "AppleWA"
+  },
+  {
+    "name": "iPad",
+    "isDiscontinued": false,
+    "productionDate": "2014-10-19T00:00:00",
+    "StoreID": "12312"
+  },
+  {
+    "name": "iPad",
+    "isDiscontinued": false,
+    "productionDate": "2014-10-11T00:00:00",
+    "StoreID": "5d759e7b-eeaf-44c6-83dd-d979b0c70ce4"
+  },
+  {
+    "name": "asdf",
+    "isDiscontinued": true,
+    "productionDate": "2014-10-25T00:00:00",
+    "StoreID": "fdcd37fe-f4aa-48ed-b513-adc20bcd3db4"
+  },
+  {
+    "name": "asdf",
+    "isDiscontinued": true,
+    "productionDate": "2014-10-25T00:00:00",
+    "StoreID": "9faaae5b-381c-46d3-b468-1cac2eaed471"
+  },
+  {
+    "name": "asdf",
+    "isDiscontinued": true,
+    "productionDate": "2014-10-25T00:00:00",
+    "StoreID": "5943c02a-e53f-42a7-838c-8d6734c1efb0"
+  },
+  {
+    "name": "asdf",
+    "isDiscontinued": true,
+    "productionDate": "2014-10-25T00:00:00",
+    "StoreID": "b274aa47-187d-40a0-89b2-0d1b84657a5a"
+  },
+  {
+    "name": "asdf",
+    "isDiscontinued": true,
+    "productionDate": "2014-10-25T00:00:00",
+    "StoreID": "5366d64d-c6a7-47d1-a713-ec2e23754a7f"
+  },
+  {
+    "name": "Chips",
+    "isDiscontinued": false,
+    "productionDate": "2014-10-23T00:00:00",
+    "StoreID": "f2fb0b09-f8e6-40ac-9395-6848d483ee83"
+  }
+]

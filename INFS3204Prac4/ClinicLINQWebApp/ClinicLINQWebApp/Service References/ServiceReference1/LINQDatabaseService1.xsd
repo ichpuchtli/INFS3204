@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ClinicLINQWebApp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ClinicLINQWebApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RegistrationID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Player" nillable="true" type="tns:Player" />
+  <xs:complexType name="Club">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Founded" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegistrationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorldRanking" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Club" nillable="true" type="tns:Club" />
+  <xs:complexType name="Membership">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClubID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MembershipID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumOfGames" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PlayerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Membership" nillable="true" type="tns:Membership" />
+</xs:schema>

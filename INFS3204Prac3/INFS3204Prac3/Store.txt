@@ -1,0 +1,107 @@
+[
+  {
+    "ID": "DSWEST",
+    "name": "DickSmith",
+    "branchNO": 0,
+    "address": "Westfield",
+    "phoneNumber": 328912233
+  },
+  {
+    "ID": "AppleStoreBris",
+    "name": "Apple",
+    "branchNO": 0,
+    "address": "Brisbane",
+    "phoneNumber": 0
+  },
+  {
+    "ID": "AppleBris",
+    "name": "Apple",
+    "branchNO": 0,
+    "address": "Brisbane",
+    "phoneNumber": 0
+  },
+  {
+    "ID": "AppleVic",
+    "name": "Apple",
+    "branchNO": 0,
+    "address": "Victoria",
+    "phoneNumber": 0
+  },
+  {
+    "ID": "AppleNSW",
+    "name": "Apple",
+    "branchNO": 0,
+    "address": "NSW",
+    "phoneNumber": 0
+  },
+  {
+    "ID": "AppleSA",
+    "name": "Apple",
+    "branchNO": 0,
+    "address": "South Australia",
+    "phoneNumber": 0
+  },
+  {
+    "ID": "AppleWA",
+    "name": "Apple",
+    "branchNO": 0,
+    "address": "Western Australia",
+    "phoneNumber": 0
+  },
+  {
+    "ID": "12312",
+    "name": "Move",
+    "branchNO": 1,
+    "address": "1",
+    "phoneNumber": 123
+  },
+  {
+    "ID": "5d759e7b-eeaf-44c6-83dd-d979b0c70ce4",
+    "name": "adf",
+    "branchNO": 1,
+    "address": "asdf",
+    "phoneNumber": 1
+  },
+  {
+    "ID": "fdcd37fe-f4aa-48ed-b513-adc20bcd3db4",
+    "name": "Top",
+    "branchNO": 123,
+    "address": "1203",
+    "phoneNumber": 131
+  },
+  {
+    "ID": "9faaae5b-381c-46d3-b468-1cac2eaed471",
+    "name": "Top",
+    "branchNO": 123,
+    "address": "1203",
+    "phoneNumber": 131
+  },
+  {
+    "ID": "5943c02a-e53f-42a7-838c-8d6734c1efb0",
+    "name": "Top",
+    "branchNO": 123,
+    "address": "1203",
+    "phoneNumber": 131
+  },
+  {
+    "ID": "b274aa47-187d-40a0-89b2-0d1b84657a5a",
+    "name": "Top",
+    "branchNO": 123,
+    "address": "1203",
+    "phoneNumber": 131
+  },
+  {
+    "ID": "5366d64d-c6a7-47d1-a713-ec2e23754a7f",
+    "name": "Top",
+    "branchNO": 123,
+    "address": "1203",
+    "phoneNumber": 131
+  },
+  {
+    "ID": "f2fb0b09-f8e6-40ac-9395-6848d483ee83",
+    "name": "RedRooster",
+    "branchNO": 1,
+    "address": "Brisbane",
+    "phoneNumber": 1
+  }
+]
